@@ -1,58 +1,17 @@
-<html class="gr__bl_ocks_org">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8" />
-    <style>
-      body {
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        margin: auto;
-        padding-top: 40px;
-        position: relative;
-        width: 960px;
-      }
-
-      button {
-        position: absolute;
-        right: 10px;
-        top: 10px;
-      }
-
-      .bullet {
-        font: 10px sans-serif;
-      }
-      .bullet .marker {
-        stroke: #000;
-        stroke-width: 2px;
-      }
-      .bullet .tick line {
-        stroke: #666;
-        stroke-width: 0.5px;
-      }
-      .bullet .range.s0 {
-        fill: #eee;
-      }
-      .bullet .range.s1 {
-        fill: #ddd;
-      }
-      .bullet .range.s2 {
-        fill: #ccc;
-      }
-      .bullet .measure.s0 {
-        fill: lightsteelblue;
-      }
-      .bullet .measure.s1 {
-        fill: steelblue;
-      }
-      .bullet .title {
-        font-size: 14px;
-        font-weight: bold;
-      }
-      .bullet .subtitle {
-        fill: #999;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="bullet.css" />
+    <title>Bullet</title>
   </head>
-  <body data-gr-c-s-loaded="true">
-    <button>Update</button>
+  <body>
+    <div class="container" id="root">
+      <button>Update</button>
+    </div>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="bullet.js"></script>
     <script>
@@ -71,7 +30,7 @@
           if (error) throw error;
 
           var svg = d3
-            .select('body')
+            .select('#root')
             .selectAll('svg')
             .data(data)
             .enter()
