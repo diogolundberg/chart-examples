@@ -1,12 +1,37 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f4f4;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.pv4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .center {
@@ -14,6 +39,78 @@ code {
   margin-left: auto;
 }
 
-.w-80 {
-  width: 80%;
+.bg-gray {
+  background-color: rgba(200, 200, 200);
+}
+
+.bg-gray:hover {
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+.bg-gray:focus {
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 10px 10px 5px 10px;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+svg {
+  vertical-align: top;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes stretch {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.stretch {
+  -webkit-animation-name: stretch;
+  animation-name: stretch;
 }
